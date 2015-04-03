@@ -10,16 +10,21 @@ $(document).ready(function() {
     list = $('#list');
     deleteButton = $('.delete');
 
+
     addToList = function(item){
 
         listArray.push(item)
-        updateDisplay()
 
+        updateDisplay()
     }
 
     deleteFromList = function(item){
 
+        itemIndex = listArray.indexOf(item);
 
+        listArray.splice(itemIndex,1);
+
+        updateDisplay();
 
     }
 
@@ -42,25 +47,19 @@ $(document).ready(function() {
 
     })
 
-    $(document).on('click','#submit',function(el){
-
-
-    })
-
+    //delete button
+    // it's done this way instead of the way the previous button is done becuase
+    // we need a delete button on each item we add
     $(document).on('click','.delete', function(el) {
         todo = el.currentTarget;
 
-        sibling = $(todo).siblings('li')
+        sibling = $(todo).siblings('li');
 
-        console.log(sibling[0].innerHTML)
+        name = sibling[0].innerHTML;
 
-        deleteFromList()
+        deleteFromList(name);
+
     })
 
-
-    //$('#submit').submit( function(e) {
-    //    e.preventDefault();
-    //    return false;
-    //});
 
 })
