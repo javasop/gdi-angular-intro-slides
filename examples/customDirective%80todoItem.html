@@ -1,0 +1,8 @@
+<div  class="todo" ng-class="{done:todo.done}">
+<img height="20" width="30" ng-show="todo.done" src="../../img/check.png">{{todo.name | limitTo:10}}
+<button ng-click="deleteTodo(todo)">Delete</button>
+<button class="done" ng-click="todo.done = !todo.done">
+    <span ng-show="todo.done">Not Finished</span>
+    <span ng-show="!todo.done" >Finished</span>
+</button>
+</div>

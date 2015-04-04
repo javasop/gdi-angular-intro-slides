@@ -22,5 +22,3 @@ Organization <!-- .element: class="fragment" -->
 Fast (responsive) websites <!-- .element: class="fragment" -->
 
 Easy to test <!-- .element: class="fragment" -->
-
-Note: TODO: get an example to illustrate 'fast and responsive'.  IE loading content into the page instead of refreshing

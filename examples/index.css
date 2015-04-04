@@ -1,0 +1,25 @@
+.center{
+    width:500px;
+    height:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-100px 0 0 -150px;
+}
+.button{
+    width: 100px;
+    height:50px;
+}
+input{
+    width: 200px;
+    height:50px;
+}
+.done{
+    color:darkred;
+}
+.todo > button{
+    float:right
+}
+.todo{
+    margin-bottom: 10px;
+}

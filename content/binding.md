@@ -28,21 +28,21 @@ Note:
 ## expressions and binding
 Let's add an input into our view and add an ng-model attribute:
 ```
-<input type="text" ng-model="user.name" />
+<input type="text" ng-model="myName" />
 ```
 
 Then add a binding somewhere on the page
 ```
-<h1>Hi, {{user.name}}</h1>
+<h1>Hi, {{myName}}</h1>
 ```
 
 
 ## expressions and binding
 Binding can be used for more than just printing text
 ```
-<input type="text" ng-model="user.status" />
+<input type="text" ng-model="myName" />
 ```
 
 ```
-<h2 class="text-{{user.status}}">Your current status: {{user.status}}</h2>
+<h2 class="text-{{myName}}">Your name is: {{myName}}</h2>
 ```
