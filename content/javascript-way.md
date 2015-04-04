@@ -19,14 +19,15 @@ The HTML:
 ## jQuery - Part1
 
 We initialize some variables (inside document read)
-```
+```javascript
     $(document).ready(function() {
 
     listArray = [];
     input = $('#list-input');
+    submitButton = $('#submit');
     list = $('#list');
 
-    }
+    )
 ```
 
 

@@ -8,8 +8,6 @@ $(document).ready(function() {
     input = $('#list-input');
     submitButton = $('#submit');
     list = $('#list');
-    deleteButton = $('.delete');
-
 
     addToList = function(item){
 
@@ -20,11 +18,11 @@ $(document).ready(function() {
 
     deleteFromList = function(item){
 
-        itemIndex = listArray.indexOf(item);
-
-        listArray.splice(itemIndex,1);
-
-        updateDisplay();
+        index = listArray.indexOf(item)
+        if(index > -1){
+            listArray.splice(index,1);
+        }
+        updateDisplay()
 
     }
 
