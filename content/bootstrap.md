@@ -2,7 +2,9 @@
 Download AngularJS
 Or use the CDN
 Link it in your html
-```
+
+```html
+
 <!DOCTYPE html>
 <html>
 <head>
