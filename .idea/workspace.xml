@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a76a17-80ce-4f78-9117-1f7eec90a7fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/angularTodo/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/todo/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/angularTodo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/todo/index.html" />
-      <change type="MOVED" beforePath="C:\cygwin64\home\osama\gdi-angular-intro-slides\examples\jqueryExample\index.html" afterPath="$PROJECT_DIR$/examples/jqueryTodo/index.html" />
-      <change type="MOVED" beforePath="C:\cygwin64\home\osama\gdi-angular-intro-slides\examples\jqueryExample\todo.js" afterPath="$PROJECT_DIR$/examples/jqueryTodo/todo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/bootstrap.md" afterPath="$PROJECT_DIR$/content/bootstrap.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/controllers.md" afterPath="$PROJECT_DIR$/content/controllers.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/directives.md" afterPath="$PROJECT_DIR$/content/directives.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/customDirective/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/customDirective/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/customDirective/todoItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/customDirective/todoList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/customdirectives.md" afterPath="$PROJECT_DIR$/content/customdirectives.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/directives2.md" afterPath="$PROJECT_DIR$/content/directives2.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/filters.md" afterPath="$PROJECT_DIR$/content/filters.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/index.css" afterPath="$PROJECT_DIR$/examples/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/modules.md" afterPath="$PROJECT_DIR$/content/modules.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/qunit-1.12.0.js" afterPath="$PROJECT_DIR$/test/qunit-1.12.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/rewriteTodo.md" afterPath="$PROJECT_DIR$/content/rewriteTodo.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/angularTodo/index.html" afterPath="$PROJECT_DIR$/examples/angularTodo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gdi-angular-intro-slides.iws" />
@@ -41,8 +36,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36842105">
-              <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.2890909">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -51,8 +46,8 @@
       <file leaf-file-name="directives2.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/directives2.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9310346">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state vertical-scroll-proportion="-15.827586">
+              <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -61,14 +56,50 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="customdirectives.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/customdirectives.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.37931">
+              <caret line="131" column="3" selection-start-line="131" selection-start-column="3" selection-end-line="131" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/filters.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.7586207">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todoItem.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/customDirective/todoItem.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="1" column="98" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -82,7 +113,6 @@
         <option value="$PROJECT_DIR$/content/angular-way.md" />
         <option value="$PROJECT_DIR$/examples/jqueryExample/todo.js" />
         <option value="$PROJECT_DIR$/content/javascript-way.md" />
-        <option value="$PROJECT_DIR$/content/filters.md" />
         <option value="$PROJECT_DIR$/content/binding.md" />
         <option value="$PROJECT_DIR$/content/bootstrap.md" />
         <option value="$PROJECT_DIR$/content/modules.md" />
@@ -92,10 +122,16 @@
         <option value="$PROJECT_DIR$/examples/jqueryTodo/index.html" />
         <option value="$PROJECT_DIR$/examples/todo/index.html" />
         <option value="$PROJECT_DIR$/content/rewriteTodo.md" />
-        <option value="$PROJECT_DIR$/examples/index.css" />
         <option value="$PROJECT_DIR$/examples/angularTodo/app.js" />
-        <option value="$PROJECT_DIR$/examples/angularTodo/index.html" />
         <option value="$PROJECT_DIR$/content/directives2.md" />
+        <option value="$PROJECT_DIR$/examples/angularTodo/index.html" />
+        <option value="$PROJECT_DIR$/examples/index.css" />
+        <option value="$PROJECT_DIR$/examples/customDirective/todoList.html" />
+        <option value="$PROJECT_DIR$/examples/customDirective/app.js" />
+        <option value="$PROJECT_DIR$/examples/customDirective/index.html" />
+        <option value="$PROJECT_DIR$/examples/customDirective/todoItem.html" />
+        <option value="$PROJECT_DIR$/content/customdirectives.md" />
+        <option value="$PROJECT_DIR$/content/filters.md" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -170,6 +206,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\cygwin64\home\osama\gdi-angular-intro-slides\examples\customDirective" />
       <recent name="C:\cygwin64\home\osama\gdi-angular-intro-slides\examples\angularTodo" />
       <recent name="C:\cygwin64\home\osama\gdi-angular-intro-slides\content" />
     </key>
@@ -239,7 +276,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33553356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33553356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17147435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -344,27 +381,6 @@
         <state vertical-scroll-proportion="0.28977272">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/filters.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059929494">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/customdirectives.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/javascript-way.md">
@@ -481,32 +497,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5902778">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/angularTodo/app.js">
+    <entry file="file://$PROJECT_DIR$/examples/customDirective/todoList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27014756">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.030909091">
+          <caret line="1" column="79" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/angularTodo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39766082">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43272728">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/angularTodo/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/customDirective/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17708333">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/customDirective/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49454546">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/content/directives2.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9310346">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state vertical-scroll-proportion="-15.827586">
+          <caret line="27" column="85" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/customdirectives.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.37931">
+          <caret line="131" column="3" selection-start-line="131" selection-start-column="3" selection-end-line="131" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/customDirective/todoItem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="98" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/filters.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7586207">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -516,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36842105">
-          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.2890909">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
           <folding />
         </state>
       </provider>

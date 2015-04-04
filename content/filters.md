@@ -1,18 +1,9 @@
 ## Filters
-Let's clean up that [date](https://docs.angularjs.org/api/ng/filter/date)
+Serves the purpose of cleaning up our data.
+Let's say we want to limit the text displayed to only 10 characters.
+
 ```
-<div ng-controller="todoController as todo">
-    <div>
-        <h2>
-            {{todo.item.name}}
-            <span>{{todo.item.release | date:'mediumDate'}}</span>
-        </h2>
-        <h3>International Gross: ${{todo.item.gross}}<h3>
-        <div>
-            <p>{{todo.item.shortDescription}}</p>
-        </div>
-    </div>
-</div>
+{{todo.name | limitTo:10}}
 ```
 
 Note:
@@ -23,24 +14,6 @@ myApp.filter('reverse', function () {
     return text.split("").reverse().join("");
   }
 });
-
-
-## Filters
-And the revenue
-```
-<div ng-controller="todoController as todo">
-    <div>
-        <h2>
-            {{todo.item.name}}
-            <span>{{todo.item.release | date:'mediumDate'}}</span>
-        </h2>
-        <h3>International Gross: ${{todo.item.gross * 1000000 | currency:'$' }}<h3>
-        <div>
-            <p>{{todo.item.shortDescription}}</p>
-        </div>
-    </div>
-</div>
-```
 
 
 ## More Built-in Filters

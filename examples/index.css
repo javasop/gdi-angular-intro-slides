@@ -17,3 +17,9 @@ input{
 .done{
     color:darkred;
 }
+.todo > button{
+    float:right
+}
+.todo{
+    margin-bottom: 10px;
+}

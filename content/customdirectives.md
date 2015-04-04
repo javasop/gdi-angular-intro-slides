@@ -10,33 +10,39 @@ It's not reusable
 ## Let's make our own directive
 In our HTML
 ```
-<item-title></item-title>
+<todo-item></todo-item>
 ```
 
 In our app
 ```
-app.directive('itemTitle', function(){
+app.directive('todoItem', function(){
     return{
         restrict: 'E',
-        templateUrl: 'templates/item-title.html'
+        templateUrl: 'todoItem.html'
     };
 });
 ```
 
-In our template
+Let's move the todo items <li> to the directive template
 ```html
-{{item.name}}
-<span class="small">{{item.release | date:'mediumDate'}}</span>
+<div  class="todo" ng-class="{done:todo.done}">
+<img height="20" width="30" ng-show="todo.done" src="../../img/check.png">{{todo.name}}
+<button ng-click="deleteTodo(todo)">Delete</button>
+<button class="done" ng-click="todo.done = !todo.done">
+    <span ng-show="todo.done">Not Finished</span>
+    <span ng-show="!todo.done" >Finished</span>
+</button>
+</div>
 ```
 
 
 ## Restrict
 
 ```
-app.directive('itemTitle', function(){
+app.directive('todoItem', function(){
     return{
         restrict: 'E',
-        templateUrl: 'templates/item-title.html'
+        templateUrl: 'todoItem.html'
     };
 });
 ```
@@ -44,17 +50,17 @@ app.directive('itemTitle', function(){
 
 A: attribute
 ```
-<div item-title></div>
+<div todo-item></div>
 ```
 
 E: element
 ```
-<item-title></item-title>
+<todo-item></todo-item>
 ```
 
 C: class
 ```
-<div class="item-title"></div>
+<div class="todo-item"></div>
 ```
 
 Note:
@@ -67,56 +73,60 @@ You can even do multiple so that they all work.
 ### Directives with Controllers
 
 
-### Let's move those panels
+### Let's move our whole todo list into it's own directives
+
+The benefits:
+* Can be reused in other parts of our application. 
+* Example: if we wanted to add multiple todo list of different types
 
 In our HTML
 ```
-<item-panels>
-</item>
+<todo-list>
+</todo-list>
 ```
-
 In our app
 ```
-app.directive('itemPanels', function(){
+app.directive('todoList', function(){
     return{
         restrict: 'E',
-        templateUrl: 'templates/item-panels.html'
+        templateUrl: 'todoList.html'
     };
 });
 ```
 
 In our template
 ```html
-<ul class='nav nav-tabs'>
-...
+<input ng-model="currentTodo" id="list-input" placeholder="task"></input>
+<button class="button" ng-click='addTodo(currentTodo)' id="submit">Add</button>
+<ul id="list">
+<todo-item ng-repeat="todo in todos"></todo-item>
 </ul>
-<div class="panel" ng-show="panel.isTabSelected(1)">
-...
-</div>
-<div class="panel" ng-show="panel.isTabSelected(2)">
-...
-</div>
 ```
 
 
-### Now we need to move the controller into the directive
-```
-app.directive('itemPanels', function(){
+### Let's move the controller into our directive
+```html
+app.directive('todoList', function(){
     return{
         restrict: 'E',
         templateUrl: 'templates/item-panels.html',
         controller: function(){
-            this.tab = 1;
-
-            this.selectTab = function(setTab){
-                this.tab = setTab;
-            };
-
-            this.isTabSelected = function(checkTab){
-                return this.tab === checkTab;
-            };
-        },
-        controllerAs: 'panels'
+        
+            $scope.todos = []
+            $scope.currentTodo = ""
+        
+            $scope.addTodo = function(todo){
+                todoObject = {
+                    name:todo,
+                    done:false
+                }
+                $scope.todos.push(todoObject);
+            }
+            $scope.deleteTodo = function(todo){
+                index = $scope.todos.indexOf(todo)
+                $scope.todos.splice(index,1)
+            }
+        }
     };
 });
 ```
