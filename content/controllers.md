@@ -26,7 +26,7 @@ then assign the data to the scope variable
 
     app.controller('TodoController', function($scope){
                 $scope.myName = "Sam"
-                $scope.haveTodo = {mostImportant:"exercise"};
+                $scope.todo= {mostImportant:"exercise"};
     });
 })();
 ```
@@ -37,8 +37,8 @@ then assign the data to the scope variable
 ```
 <div class="container" ng-controller="TodoController">
     <h1>Hi, {{myName}}.</h1>
-    <h2 class="text-{{haveTodo.mostImportant}}">
-    Most Important thing you have to do is: {{haveTodo.mostImportant}}
+    <h2 class="text-{{todo.mostImportant}}">
+    Most Important thing you have to do is: {{todo.mostImportant}}
     </h2>
 </div>
 ```

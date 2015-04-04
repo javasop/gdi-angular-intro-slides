@@ -12,7 +12,6 @@ Let's go back to our first example and rewrite it completely in Angularjs.
 
 
 ## Step1: our Data
-```javascript
 
 ```
     app.controller('TodoController', function($scope){
@@ -39,11 +38,10 @@ Write your html and spice it with some Directives to connect to your data.
 <div class="todo" ng-controller="TodoController">
 
 <input ng-model="currentTodo" id="list-input" placeholder="task"></input>
+
 <button ng-click='addTodo(currentTodo)' id="submit">Add</button>
 
 <ul id="list">
-
-
 
 <li ng-repeat="todo in todos" ng-click="deleteTodo(todo)">
 </li>
@@ -51,7 +49,6 @@ Write your html and spice it with some Directives to connect to your data.
 <!-- another way of deleteing would be -->
 <li ng-repeat="todo in todos" ng-click="todos.splice($index,1)">
 </li>
-
 
 </ul>
 

@@ -23,13 +23,12 @@ And in our HTML file
 <!DOCTYPE HTML>
 <html ng-app="todo">
     <head>
-        <link rel="stylesheet" type="text/css" href="boostrap.min.css"></link>
+    <!--
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    -->
     </head>
     <body>
-        <!--
-        <script type="text/javascript" src="angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
-        -->
     </body>
 </html>
 ```

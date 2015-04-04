@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="todo">
+<head>
+    <title>Todo App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+<body>
+
+<div class="todo center" ng-controller="TodoController">
+
+    <input ng-model="currentTodo" id="list-input" placeholder="task"></input>
+    <button class="button" ng-click='addTodo(currentTodo)' id="submit">Add</button>
+
+    <ul id="list">
+
+        <li ng-repeat="todo in todos" ng-class="{done:todo.done}">
+            {{todo.name}} <button ng-click="deleteTodo(todo)">Delete</button> <button ng-click="todo.done = !todo.done">done</button>
+        </li>
+
+        <!-- another way of deleteing would be -->
+        <!--<li ng-repeat="todo in todos" ng-click="todos.splice($index,1)">-->
+        <!--</li>-->
+
+
+    </ul>
+
+</div>
+
+</body>
+</html>

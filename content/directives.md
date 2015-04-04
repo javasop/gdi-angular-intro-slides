@@ -5,7 +5,7 @@ Let's add more data to our example
 ```
 $scope.todos = {
     mostImportant:'exercise',
-    leastImportant:'play video games',
+    leastImportant:'play video games'
 };
 $scope.eatingHealthy = false
 ```
@@ -45,7 +45,7 @@ ngShow: show the html element if the value provided is true
         
         <p>
         Can I get an easter egg
-        covered with chocoalte and filled with peanuts please. 
+        covered with chocolate and filled with peanuts please. 
         I am eating healthy ... hehe.
         <img src="../img/easter-egg.jpg" ngshow="({{eatingHealthy}}" >
         </p>

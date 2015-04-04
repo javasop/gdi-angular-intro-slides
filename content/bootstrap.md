@@ -1,15 +1,14 @@
 ## Getting Started
 Download AngularJS
+Or use the CDN
 
-Download Bootstrap (or your favorite css library)
-
+Link it in your html
     <!DOCTYPE html>
     <html>
         <head>
-            <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         </head>
         <body>
-            <!-- <script type="text/javascript" src="angular.min.js"></script> -->
         </body>
     </html>
 
