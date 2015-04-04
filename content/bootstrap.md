@@ -1,8 +1,8 @@
 ## Getting Started
 Download AngularJS
 Or use the CDN
-
 Link it in your html
+```
     <!DOCTYPE html>
     <html>
         <head>
@@ -11,6 +11,6 @@ Link it in your html
         <body>
         </body>
     </html>
-
+```
 Note:
 - adding the script tag and style tags
