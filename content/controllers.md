@@ -6,9 +6,9 @@ Controllers are (from the name) what controls our html file and our data. <!-- .
 First we need to add a controller to our app
 ```
 (function(){
-    var app = angular.module('collection', [ ]);
+    var app = angular.module('todo', [ ]);
 
-    app.controller('UserController', function($scope){
+    app.controller('TodoController', function($scope){
 
     });
 })();
@@ -22,9 +22,9 @@ Let's populate a list of todos here in our controller.
 then assign the data to the scope variable
 ```
 (function(){
-    var app = angular.module('collection', [ ]);
+    var app = angular.module('todo', [ ]);
 
-    app.controller('UserController', function($scope){
+    app.controller('TodoController', function($scope){
                 $scope.myName = "Sam"
                 $scope.haveTodo = {mostImportant:"exercise"};
     });
@@ -35,7 +35,7 @@ then assign the data to the scope variable
 
 ## Attaching the Controller
 ```
-<div class="container" ng-controller="UserController">
+<div class="container" ng-controller="TodoController">
     <h1>Hi, {{myName}}.</h1>
     <h2 class="text-{{haveTodo.mostImportant}}">
     Most Important thing you have to do is: {{haveTodo.mostImportant}}
@@ -49,7 +49,7 @@ then assign the data to the scope variable
 The "scope" of the controller only works inside of the container
 
 ```
-<div class="container" ng-controller="UserController">
+<div class="container" ng-controller="TodoController">
     <h1>Hi, {{myName}}.</h1>
     <h2 class="text-{{haveTodo.mostImportant}}">Your current status: {{haveTodo.mostImportant}}</h2>
 </div>

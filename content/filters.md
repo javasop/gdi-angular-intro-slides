@@ -1,15 +1,15 @@
 ## Filters
 Let's clean up that [date](https://docs.angularjs.org/api/ng/filter/date)
 ```
-<div ng-controller="CollectionController as collection">
+<div ng-controller="todoController as todo">
     <div>
         <h2>
-            {{collection.item.name}}
-            <span>{{collection.item.release | date:'mediumDate'}}</span>
+            {{todo.item.name}}
+            <span>{{todo.item.release | date:'mediumDate'}}</span>
         </h2>
-        <h3>International Gross: ${{collection.item.gross}}<h3>
+        <h3>International Gross: ${{todo.item.gross}}<h3>
         <div>
-            <p>{{collection.item.shortDescription}}</p>
+            <p>{{todo.item.shortDescription}}</p>
         </div>
     </div>
 </div>
@@ -28,15 +28,15 @@ myApp.filter('reverse', function () {
 ## Filters
 And the revenue
 ```
-<div ng-controller="CollectionController as collection">
+<div ng-controller="todoController as todo">
     <div>
         <h2>
-            {{collection.item.name}}
-            <span>{{collection.item.release | date:'mediumDate'}}</span>
+            {{todo.item.name}}
+            <span>{{todo.item.release | date:'mediumDate'}}</span>
         </h2>
-        <h3>International Gross: ${{collection.item.gross * 1000000 | currency:'$' }}<h3>
+        <h3>International Gross: ${{todo.item.gross * 1000000 | currency:'$' }}<h3>
         <div>
-            <p>{{collection.item.shortDescription}}</p>
+            <p>{{todo.item.shortDescription}}</p>
         </div>
     </div>
 </div>

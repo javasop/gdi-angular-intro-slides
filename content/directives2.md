@@ -1,32 +1,9 @@
 ## More Directives
+How about we display two different two todos for two different people
 
+var myTodos
 
-
-## While you were gone
-```
-{
-    name: "Marvel's The Avengers",
-    gross: 1518.6,
-    release: new Date('2012-05-04'),
-    inCollection: true,
-    shortDescription: 'Superheros destroy city while fighthing a Norse god and some aliensl',
-    actors: [
-        "Robert Downey, Jr.",
-        "Chris Hemsworth",
-        "Chris Evans",
-        "Jeremy Renner",
-        "Mark Ruffalo",
-        "Scarlett Johansson",
-        ...
-    ],
-    longDescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-}
-```
-
-Note:
-we added some more data!
-Let's display but now with tabs!
-
+var herTodos
 
 ## Add Tabs
 ```html

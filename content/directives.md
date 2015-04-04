@@ -1,134 +1,128 @@
-## Adding functionality
+## Directives: the spices of Angualrjs
+
+Let's add more data to our example
+
 ```
-<div ng-controller="CollectionController as collection">
+$scope.todos = {
+    mostImportant:'exercise',
+    leastImportant:'play video games',
+};
+$scope.eatingHealthy = false
+```
+
+```
+<div ng-controller="todoController">
     <div>
+    
         <h2>
-            {{collection.item.name}}
-            <span>{{collection.item.release}}</span>
+          I have to: {{todos.mostImportant}}
         </h2>
-        <h3>International Gross: ${{collection.item.gross}}<h3>
-        <div>
-            <p>{{collection.item.shortDescription}}</p>
-        </div>
-        <h3>(In your collection)</h3>
+        
+        <p>
+          I shouldn't : {{todos.leastImportant}}
+        </p>
     </div>
 </div>
 ```
-Expand our list to hold thing I plan to collect.
-Show a little message indicating when it's in the collection
-
-Note: Let's say I want to expand my collection to hold movies that I don't own. And wanted to add a little text to the view indicate that
 
 
-## Adding Functionality: ngshow directive
-```
-var movie = {
-    name: "Marvel's The Avengers",
-    gross: 1518.6,
-    release: new Date('2012-05-04'),
-    shortDescription: 'Superheros destroy city while fighting a Norse god and some aliens',
-    inCollection: true
-};
-```
+## ngshow directive
+
+Angularjs provides a lot of directives that add functionality to our html
+
+ngShow: show the html element if the value provided is true
 
 ```
-<div ng-controller="CollectionController as collection">
+<div ng-controller="todoController">
     <div>
         <h2>
-            {{collection.item.name}}
-            <span>{{collection.item.release}}</span>
+          I have to: {{todos.mostImportant}}
         </h2>
-        <h3>International Gross: ${{collection.item.gross}}<h3>
-        <div>
-            <p>{{collection.item.shortDescription}}</p>
-        </div>
-        <h3 ng-show="{{collection.item.inCollection}}">(In your collection)</h3>
+        
+        <p>
+          I shouldn't : {{todos.leastImportant}}
+        </p>
+        
+        <p>
+        Can I get an easter egg
+        covered with chocoalte and filled with peanuts please. 
+        I am eating healthy ... hehe.
+        <img src="../img/easter-egg.jpg" ngshow="({{eatingHealthy}}" >
+        </p>
     </div>
 </div>
 ```
 <!-- .element: class="fragment" -->
 
 
-## Adding Functionality: NgHide Directive
-```
-var movie = {
-    name: "Marvel's The Avengers",
-    gross: 1518.6,
-    release: new Date('2012-05-04'),
-    shortDescription: 'Superheros destroy city while fighting a Norse god and some aliens',
-    inCollection: true,
-    guiltyPleasure: false
-};
-```
+## ngHide Directive
 
 ```
-<div ng-controller="CollectionController as collection">
-    <div ng-hide="{{!collection.item.guiltyPleasure}}">
+<div ng-controller="todoController">
+    <div>
         <h2>
-            {{collection.item.name}}
-            <span>{{collection.item.release}}</span>
+          I have to: {{todos.mostImportant}}
         </h2>
-        <h3>International Gross: ${{collection.item.gross}}<h3>
-        <div>
-            <p>{{collection.item.shortDescription}}</p>
-        </div>
-        <h3 ng-show="{{collection.item.inCollection}}">(In your collection)</h3>
+        
+        <p>
+          I shouldn't : {{todos.leastImportant}}
+        </p>
+        
+        <p>
+        Can I get an easter egg
+        covered with chocoalte and filled with peanuts please?!
+        </p>
+        <p>
+        I am eating healthy, no hehe.
+        </p>
+        <img src="../img/easter-egg.jpg" nghide="({{eatingHealthy}}" >
     </div>
 </div>
 ```
 <!-- .element: class="fragment" -->
 
-Note: When you want to hide something when a condition is true
-IE. You want to hide your guilty pleasure films
 
-
-
-## More Data
-```
-var movie = {
-    name: "Marvel's The Avengers",
-    gross: 1518.6,
-    release: new Date('2012-05-04'),
-    inCollection: true,
-    shortDescription: 'Superheros destroy city while fighthing a Norse god and some aliens',
-};
-```
-
-
-## More Data
-```
-var haveTodos = [
-  "Eat",
-  "Run",
-  "Run",
-  "Exercise",
-  "Move",
-  "Don't just sit here"
-];
+## Todo list
 
 ```
-
-```
-app.controller('CollectionController', function(){
-    this.items = movies;
+app.controller('todoController', function(){
+    var todos = [
+        "Eat",
+        "Run",
+        "Run",
+        "Exercise",
+        "Move",
+        "Don't just sit here"
+    ];
+    $scope.todos = todos;
 });
 ```
 
-Note: Bad way: collection.item[0].name, etc.
+Note: Bad way: todo.item[0].name, etc.
 
 
 ## NgRepeat
+
+very important directive.
+
+previous todo application could be rewritten using ngRepeat.
+
 ```
-<div ng-repeat="item in collection.items">
+<div ng-repeat="item in todo.items">
     <h2>
-        {{item.name}}
-        <span>{{item.release | date:'mediumDate'}}</span>
+    List of Todos
     </h2>
-    <h3>International Gross: {{item.gross * 1000000 | currency:'$'}}<h3>
-    <div>
-        <p>{{item.shortDescription}}</p>
-    </div>
-    <h3 ng-show="{{item.inCollection}}">(In your collection)</h3>
+    
+    <ul>
+    
+    <li ng-repeat="todo in todos" >
+    
+    {{todo}}
+    
+    </li>
+    
+    </ul>
+    
 </div>
 ```
 Note: show good way
