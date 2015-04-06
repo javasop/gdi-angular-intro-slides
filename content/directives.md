@@ -11,7 +11,7 @@ $scope.eatingHealthy = false
 ```
 
 ```
-<div ng-controller="todoController">
+<div ng-controller="TodoController">
     <div>
     
         <h2>
@@ -33,7 +33,7 @@ Angularjs provides a lot of directives that add functionality to our html
 ngShow: show the html element if the value provided is true
 
 ```
-<div ng-controller="todoController">
+<div ng-controller="TodoController">
     <div>
         <h2>
           I have to: {{todos.mostImportant}}
@@ -58,7 +58,7 @@ ngShow: show the html element if the value provided is true
 ## ngHide Directive
 
 ```
-<div ng-controller="todoController">
+<div ng-controller="TodoController">
     <div>
         <h2>
           I have to: {{todos.mostImportant}}
@@ -85,7 +85,7 @@ ngShow: show the html element if the value provided is true
 ## Todo list
 
 ```
-app.controller('todoController', function(){
+app.controller('TodoController', function(){
     var todos = [
         "Eat",
         "Run",
@@ -108,7 +108,7 @@ very important directive.
 previous todo application could be rewritten using ngRepeat.
 
 ```
-<div ng-repeat="item in todo.items">
+<div>
     <h2>
     List of Todos
     </h2>

@@ -24,7 +24,7 @@ And in our HTML file
 <html ng-app="todo">
     <head>
     <!--
-    <script type="text/javascript" src="angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     -->
     </head>
