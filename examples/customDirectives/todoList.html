@@ -1,0 +1,16 @@
+
+<div>
+
+<p stlye="color:red" ng-show="error">
+{{error}}
+</p>
+
+</div>
+
+
+<input type="text" ng-model="currentTodo">
+<button ng-click="addToList()">Submit</button>
+<ul>
+<todo-item ng-repeat="todo in todoList">
+</todo-item>
+</ul>

@@ -1,0 +1,18 @@
+<li  ng-class="{done:todo.done}">
+{{todo.name | limitTo:5}}
+<button ng-click="todoList.splice($index,1)">Delete {{$index}}{{todo.name | limitTo:5}}
+</button>
+
+<button ng-click="todo.done = !todo.done">
+
+<span ng-hide="todo.done">
+Done
+</span>
+
+<span ng-hide="!todo.done">
+Not Done
+</span>
+
+</button>
+
+</li>
