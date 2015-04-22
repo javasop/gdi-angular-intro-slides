@@ -5,9 +5,9 @@ Controllers are (from the name) what controls our html file and our data. <!-- .
 ## Controllers
 First we need to add a controller to our app
 ```
-    var app = angular.module('todo', [ ]);
+    var app = angular.module('turing', [ ]);
 
-    app.controller('TodoController', function($scope){
+    app.controller('UserController', function($scope){
 
     });
 
@@ -16,27 +16,42 @@ First we need to add a controller to our app
 
 ## Controllers
 
-Let's populate a list of todos here in our controller.
+Let's populate a list of turings here in our controller.
 then assign the data to the scope variable
 ```
-    var app = angular.module('todo', [ ]);
+    var app = angular.module('turing', [ ]);
 
-    app.controller('TodoController', function($scope){
-                $scope.myName = "Sam"
-                $scope.todo= {mostImportant:"exercise"};
-    });
+    app.controller('UserController', function($scope){
+
+    $scope.students =
+
+        {
+            "cohort":"1410",
+            "students": [
+                "jane",
+                "john",
+                "jimmy",
+                "jones"
+            ],
+            "color":"blue"
+        }
+
+
+            
+        });
+        
+        
 ```
 
 
 
 ## Attaching the Controller
 ```
-<div class="container" ng-controller="TodoController">
-    <h1>Hi, {{myName}}.</h1>
-    <h2 class="text-{{todo.mostImportant}}">
-    Most Important thing you have to do is: {{todo.mostImportant}}
-    </h2>
-</div>
+<section class="center" ng-controller="UserController">
+
+        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+
+</section>
 ```
 
 
@@ -45,9 +60,10 @@ then assign the data to the scope variable
 The "scope" of the controller only works inside of the container
 
 ```
-<div class="container" ng-controller="TodoController">
-    <h1>Hi, {{myName}}.</h1>
-    <h2 class="text-{{todo.mostImportant}}">Your current status: {{todo.mostImportant}}</h2>
-</div>
-{{myName}} <!-- doesnt't work! -->
+<section class="center" ng-controller="UserController">
+
+        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+
+</section>
+{{students.cohort}} <!-- doesnt't work! -->
 ```
