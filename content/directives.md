@@ -1,54 +1,46 @@
-## Directives: the spices of Angualrjs
-
-Let's add more data to our example
-
-```
-$scope.todos = {
-    mostImportant:'exercise',
-    leastImportant:'play video games'
-};
-$scope.eatingHealthy = false
-```
+## Directives: the spices of Angularjs
+Angularjs provides a lot of directives that add functionality to our html <!-- .element: class="fragment" -->
+Let's add more data to our application
 
 ```
-<div ng-controller="TodoController">
-    <div>
-    
-        <h2>
-          I have to: {{todos.mostImportant}}
-        </h2>
-        
-        <p>
-          I shouldn't : {{todos.leastImportant}}
-        </p>
-    </div>
-</div>
+app.controller('UserController', function($scope){
+
+    $scope.students =[
+
+    {
+        "cohort":"1410",
+        "students": [
+            "jane",
+            "john",
+            "jimmy",
+            "jones"
+        ],
+        "color":"blue"
+    },
+    {
+        "cohort":"1412",
+        "students": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "color":"red"
+    }
+]
+
+});
 ```
+
 
 
 ## ngshow directive
-
-Angularjs provides a lot of directives that add functionality to our html
-
 ngShow: show the html element if the value provided is true
 
 ```
 <div ng-controller="TodoController">
     <div>
-        <h2>
-          I have to: {{todos.mostImportant}}
-        </h2>
-        
-        <p>
-          I shouldn't : {{todos.leastImportant}}
-        </p>
-        
-        <p>
-        Can I get an easter egg
-        covered with chocolate and filled with peanuts please. 
-        I am eating healthy ... hehe.
-        <img src="../img/easter-egg.jpg" ngshow="({{eatingHealthy}}" >
-        </p>
+    
     </div>
 </div>
 ```
@@ -60,22 +52,6 @@ ngShow: show the html element if the value provided is true
 ```
 <div ng-controller="TodoController">
     <div>
-        <h2>
-          I have to: {{todos.mostImportant}}
-        </h2>
-        
-        <p>
-          I shouldn't : {{todos.leastImportant}}
-        </p>
-        
-        <p>
-        Can I get an easter egg
-        covered with chocoalte and filled with peanuts please?!
-        </p>
-        <p>
-        I am eating healthy, no hehe.
-        </p>
-        <img src="../img/easter-egg.jpg" nghide="({{eatingHealthy}}" >
     </div>
 </div>
 ```

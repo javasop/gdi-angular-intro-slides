@@ -35,12 +35,8 @@ then assign the data to the scope variable
             ],
             "color":"blue"
         }
-
-
-            
+                    
         });
-        
-        
 ```
 
 

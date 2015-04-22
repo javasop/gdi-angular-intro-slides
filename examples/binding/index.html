@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="turing">
+<head>
+    <title>turing App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+<body>
+
+<section class="center" ng-controller="UserController">
+
+    <input type="text" placeholder="your name" ng-model="myName" />
+    <input type="text" placeholder="Enter color" ng-model="myColor" />
+    <input type="number" placeholder="Enter font size" ng-model="fontSize" />
+    <p style="color:{{myColor}};font-size:{{fontSize}}px">{{myName}}</p>
+
+</section>
+
+</body>
+</html>
