@@ -5,10 +5,10 @@ var app = angular.module('turing', [ ]);
 
 app.controller('UserController', function($scope){
 
-    $scope.students =
+    $scope.cohort =
 
         {
-            "cohort":"1410",
+            "name":"1410",
             "students": [
                 "jane",
                 "john",

@@ -44,3 +44,24 @@ Write your html and spice it with some Directives to connect to your data.
 
 </div>
 ```
+
+
+## Step3: Add missing functions
+Add the missing functions to your controller
+
+```javascript
+
+    $scope.currentTodo = ""
+
+    $scope.addTodo = function(todo){
+        todoObject = {
+            name:todo
+        }
+        $scope.todos.push(todoObject);
+    }
+    $scope.deleteTodo = function(todo){
+        index = $scope.todos.indexOf(todo)
+        $scope.todos.splice(index,1)
+    }
+
+```

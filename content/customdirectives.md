@@ -4,6 +4,8 @@ In our HTML
 <todo-item></todo-item>
 ```
 
+
+
 In our app
 ```
 app.directive('todoItem', function(){
@@ -13,6 +15,8 @@ app.directive('todoItem', function(){
     };
 });
 ```
+
+
 
 Let's move the todo items <li> to the directive template
 ```html
@@ -75,6 +79,8 @@ In our HTML
 <todo-list>
 </todo-list>
 ```
+
+
 In our app
 ```
 app.directive('todoList', function(){
@@ -84,6 +90,8 @@ app.directive('todoList', function(){
     };
 });
 ```
+
+
 
 In our template
 ```html
@@ -96,28 +104,26 @@ In our template
 
 
 ### Let's move the controller into our directive
-```html
+```javascript
 app.directive('todoList', function(){
     return{
+    
         restrict: 'E',
-        templateUrl: 'templates/item-panels.html',
-        controller: function(){
         
-            $scope.todos = []
-            $scope.currentTodo = ""
+        templateUrl: 'todoList.html',
         
-            $scope.addTodo = function(todo){
-                todoObject = {
-                    name:todo,
-                    done:false
-                }
-                $scope.todos.push(todoObject);
-            }
-            $scope.deleteTodo = function(todo){
-                index = $scope.todos.indexOf(todo)
-                $scope.todos.splice(index,1)
-            }
-        }
+        scope:{},
+        
+        controller:function($scope){
+        $scope.todoList = [
+		$scope.addToList = function(){
+			todoObject = {
+			name:$scope.currentTodo,
+			done:true
+		};
+		$scope.todoList.push(todoObject);
+		}
+       }
     };
 });
 ```

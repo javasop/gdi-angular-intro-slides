@@ -1,6 +1,6 @@
 ## jQuery Way, The old Way
 
-Let's Start with a simple TODO application and Do it in good ol' Javascript and jQuery
+Let's write a simple TODO application and Do it in good ol' Javascript and jQuerys
 ... This is how we would write a simple todo list app
 
 
