@@ -1,12 +1,3 @@
-### Yeah that's still kind of ugly
-- Our app is hard to read
-- And some of these parts could be reusable
-
-Note:
-It's really not clear what's happening for one thing
-It's not reusable
-
-
 ## Let's make our own directive
 In our HTML
 ```

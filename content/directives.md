@@ -1,48 +1,50 @@
-## Directives: the spices of Angularjs
+## Directives: The spices of Angularjs
 Angularjs provides a lot of directives that add functionality to our html <!-- .element: class="fragment" -->
-Let's add more data to our application
+Let's add more data to our application <!-- .element: class="fragment" -->
 
 ```
 app.controller('UserController', function($scope){
 
-    $scope.students =[
+    $scope.cohorts =[
 
     {
-        "cohort":"1410",
+        "name":"1410",
         "students": [
             "jane",
             "john",
             "jimmy",
             "jones"
         ],
-        "color":"blue"
+        "color":"blue",
+        "graduated":false
     },
     {
-        "cohort":"1412",
+        "name":"1412",
         "students": [
             "a",
             "b",
             "c",
             "d"
         ],
-        "color":"red"
+        "color":"red",
+        "graduated":false
     }
 ]
 
 });
 ```
-
+<!-- .element: class="fragment" -->
 
 
 ## ngshow directive
 ngShow: show the html element if the value provided is true
 
 ```
-<div ng-controller="TodoController">
-    <div>
-    
-    </div>
-</div>
+<section class="center" ng-controller="UserController">
+        <div ng-show="!cohort.graduated">
+        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+        </div>
+</section>
 ```
 <!-- .element: class="fragment" -->
 
@@ -50,51 +52,46 @@ ngShow: show the html element if the value provided is true
 ## ngHide Directive
 
 ```
-<div ng-controller="TodoController">
-    <div>
-    </div>
-</div>
+<section class="center" ng-controller="UserController">
+        <div ng-hide="cohort.graduated">
+        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+        </div>
+</section>
 ```
 <!-- .element: class="fragment" -->
 
 
-## Todo list
-
-```
-app.controller('TodoController', function(){
-    var todos = [
-        "Eat",
-        "Run",
-        "Run",
-        "Exercise",
-        "Move",
-        "Don't just sit here"
-    ];
-    $scope.todos = todos;
-});
-```
-
-Note: Bad way: todo.item[0].name, etc.
-
-
 ## NgRepeat
 
-very important directive.
-
-previous todo application could be rewritten using ngRepeat.
+very important directive. <!-- .element: class="fragment" -->
+iterates through an array and repeats the html element it's attached to. <!-- .element: class="fragment" -->
 
 ```
 <div>
     <h2>
-    List of Todos
+    List of cohorts
     </h2>
     
     <ul>
     
-    <li ng-repeat="todo in todos" >
+    <li ng-repeat="cohort in cohorts" >
     
-    {{todo}}
+    {cohort.name}}
     
+        <h2>
+        List of Students
+        </h2>
+        
+        <ul>
+        
+        <li ng-repeat="student in cohort.students">
+        
+        {{student}}
+        
+        </li>
+        
+        </ul>
+        
     </li>
     
     </ul>

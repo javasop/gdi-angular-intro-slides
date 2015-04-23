@@ -23,10 +23,10 @@ then assign the data to the scope variable
 
     app.controller('UserController', function($scope){
 
-    $scope.students =
+    $scope.cohort =
 
         {
-            "cohort":"1410",
+            "name":"1410",
             "students": [
                 "jane",
                 "john",
@@ -45,7 +45,7 @@ then assign the data to the scope variable
 ```
 <section class="center" ng-controller="UserController">
 
-        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+        <h1 style="color:{{cohort.color}};"> Hi, {{cohort.name}}</h1>
 
 </section>
 ```
@@ -58,8 +58,8 @@ The "scope" of the controller only works inside of the container
 ```
 <section class="center" ng-controller="UserController">
 
-        <h1 style="color:{{students.color}};"> Hi, {{students.cohort}}</h1>
+        <h1 style="color:{{cohort.color}};"> Hi, {{cohort.name}}</h1>
 
 </section>
-{{students.cohort}} <!-- doesnt't work! -->
+{{cohort.name}} <!-- doesnt't work! -->
 ```

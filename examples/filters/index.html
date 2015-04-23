@@ -15,9 +15,11 @@
             List of cohorts
         </h2>
 
+
         <ul>
 
-            <li style="margin:20px 0 20px 0" ng-repeat="cohort in cohorts" >
+            <li style="margin:20px 0 20px 0" ng-repeat="cohort in cohorts | filter:{name:'1412'}" >
+
 
                 Cohort name: {{cohort.name}}
 

@@ -15,17 +15,9 @@ Let's go back to our first example and rewrite it completely in Angularjs.
 
 ```
     app.controller('TodoController', function($scope){
-    
-        $scope.todos = []
-        $scope.currentTodo = ""
         
-        $scope.addTodo = function(todo){
-           $scope.todos.push(todo);
-         }
-         $scope.deleteTodo = function(todo){
-            index = $scope.todos.indexOf(todo)
-            $scope.todos.splice(index,1)
-         }
+        $scope.todos = []
+        
     });
 ```
 
@@ -34,23 +26,21 @@ Let's go back to our first example and rewrite it completely in Angularjs.
 ## Step2: Design your html
 Write your html and spice it with some Directives to connect to your data.
 
-```
-<div class="todo" ng-controller="TodoController">
+```html
 
-<input ng-model="currentTodo" id="list-input" placeholder="task"></input>
+<div class="todos center" ng-controller="TodoController">
 
-<button ng-click='addTodo(currentTodo)' id="submit">Add</button>
+    <input ng-model="currentTodo" id="list-input" placeholder="task"></input>
+    <button class="button" ng-click='addTodo(currentTodo)' id="submit">Add</button>
 
-<ul id="list">
+    <ul id="list">
 
-<li ng-repeat="todo in todos" ng-click="deleteTodo(todo)">
-</li>
+        <li ng-repeat="todo in todos" class="todo">
+            <button ng-click="deleteTodo(todo)">Delete</button>
+            {{todo.name}}
+        </li>
 
-<!-- another way of deleteing would be -->
-<li ng-repeat="todo in todos" ng-click="todos.splice($index,1)">
-</li>
-
-</ul>
+    </ul>
 
 </div>
 ```
