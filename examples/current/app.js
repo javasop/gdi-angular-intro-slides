@@ -5,18 +5,52 @@ var app = angular.module('turing', [ ]);
 
 app.controller('UserController', function($scope){
 
-    $scope.cohort =
-
-        {
-            "name":"1410",
-            "students": [
-                "jane",
-                "john",
-                "jimmy",
-                "jones"
-            ],
-            "color":"blue"
-        }
-
 
 });
+
+app.directive("todoList",function(){
+
+    return {
+        restrict:"E",
+        templateUrl:"todoList.html",
+        scope:{},
+        controller:function($scope){
+
+            $scope.todoList = []
+
+            $scope.currentTodo = ""
+
+            $scope.addTodo = function(){
+
+                if($scope.currentTodo != "") {
+
+                    var todoObject = {
+                        name:$scope.currentTodo,
+                        done:false
+                    }
+                    $scope.todoList.push(todoObject)
+                }
+            }
+            $scope.deleteTodo = function(index){
+                $scope.todoList.splice(index,1);
+            }
+            $scope.toggleFinish = function(index){
+
+
+            }
+
+        }
+    }
+
+})
+
+app.directive("todoItem",function(){
+
+    return {
+        restrict:"E",
+        templateUrl:"todoItem.html"
+    }
+
+
+})
+

@@ -1,0 +1,16 @@
+{{todo.name}}
+<button ng-click="deleteTodo($index)">Delete Todo</button>
+
+<button ng-click="todo.done = !todo.done">
+
+                <span ng-show="todo.done">
+
+                    finished
+
+                </span>
+
+                <span ng-show="!todo.done">
+                    not finished
+                </span>
+
+</button>
