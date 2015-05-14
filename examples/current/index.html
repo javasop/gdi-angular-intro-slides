@@ -12,11 +12,81 @@
 
 <section class="center" ng-controller="UserController">
 
-    <todo-list>
-    </todo-list>
 
-    <todo-list>
-    </todo-list>
+    <h1 style="color:{{cohort.color}};">
+        {{cohort.name}}
+    </h1>
+
+    <!--<input type="text" ng-model="myName">-->
+
+    <!--<input placeholder="favorite thing" type="text" ng-model="favThing">-->
+    <!--<input placeholder="color" type="text" ng-model="myColor">-->
+
+<!--<div ng-show="cohort.name == 1412">-->
+
+    <!--Hello-->
+
+    <!--</div>-->
+
+    <!--<p style="color:{{myColor}}">-->
+        <!--{{favThing}}-->
+    <!--</p>-->
+
+    <!--<ul>-->
+        <!--<input type="text" ng-model="searchName">-->
+        <!--<li ng-repeat="cohort in cohorts">-->
+
+            <!--<p>{{cohort.name}}</p>-->
+
+            <!--<h1>Students</h1>-->
+            <!--<ul>-->
+
+                <!--<li ng-repeat="student in cohort.students | filter:searchName">-->
+
+                    <!--{{student}}-->
+
+                <!--</li>-->
+
+
+            <!--</ul>-->
+
+
+        <!--</li>-->
+
+    <!--</ul>-->
+
+    <form ng-submit="add()">
+        <input type="text" ng-model="currentTodo">
+
+        <ul>
+
+            <li ng-repeat="item in todoList">
+                {{item.name}}
+
+                <button ng-click="finish($index)">
+
+                <span ng-show="item.finished">
+                    Finished
+                </span>
+
+                <span ng-show="!item.finished">
+                    Not Finished
+                </span>
+
+                </button>
+
+                <button ng-click="delete($index)">
+                    Delete
+                </button>
+            </li>
+
+        </ul>
+
+
+    </form>
+
+
+
 
 </section>
 

@@ -1,56 +1,37 @@
 /**
  * Created by osama on 4/4/2015.
  */
-var app = angular.module('turing', [ ]);
+var app = angular.module('turing', []);
 
 app.controller('UserController', function($scope){
 
+    $scope.todoList = []
+
+    $scope.currentTodo = ""
+
+    $scope.add = function(){
+
+        var todoObject = {
+            name:$scope.currentTodo,
+            finished:false
+        }
+        if($scope.currentTodo != ""){
+        $scope.todoList.push(todoObject);
+        }
+        $scope.currentTodo = ""
+    }
+    $scope.delete = function(index){
+
+        $scope.todoList.splice(index,1)
+
+    }
+    $scope.finish = function(index){
+
+        var item = $scope.todoList[index];
+        item.finished = !item.finished;
+
+    }
+
 
 });
-
-app.directive("todoList",function(){
-
-    return {
-        restrict:"E",
-        templateUrl:"todoList.html",
-        scope:{},
-        controller:function($scope){
-
-            $scope.todoList = []
-
-            $scope.currentTodo = ""
-
-            $scope.addTodo = function(){
-
-                if($scope.currentTodo != "") {
-
-                    var todoObject = {
-                        name:$scope.currentTodo,
-                        done:false
-                    }
-                    $scope.todoList.push(todoObject)
-                }
-            }
-            $scope.deleteTodo = function(index){
-                $scope.todoList.splice(index,1);
-            }
-            $scope.toggleFinish = function(index){
-
-
-            }
-
-        }
-    }
-
-})
-
-app.directive("todoItem",function(){
-
-    return {
-        restrict:"E",
-        templateUrl:"todoItem.html"
-    }
-
-
-})
 
