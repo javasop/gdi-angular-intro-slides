@@ -1,7 +1,7 @@
 /**
  * Created by osama on 4/4/2015.
  */
-var app = angular.module('todo', [ ]);
+var app = angular.module('turing', [ ]);
 
 app.controller('TodoController', function($scope){
 
